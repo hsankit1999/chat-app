@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat App</title>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>Welcom to Chat App</p>
+
+    <div>
+        <form id="message-form">
+            <input type="text" name="chat">
+            <button>Submit</button>
+        </form>
+        <button id='loc'>Location</button>
+    </div>
+    <div>
+        <ol id="page"></ol>
+    </div>
+
+    <script id="message-template" type="text/template">
+        <li>
+        <div>
+            <h4>{{from}}  => <span>{{time}}</span></h4>
+        </div>
+        <div>
+            <p>{{text}}</p>
+        </div>
+        </li>
+    </script>
+
+    <script type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/mustache.js"></script>
+    <script type="text/javascript" src="js/moment/moment.js"></script>
+
+</body>
+</html>
